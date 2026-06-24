@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2026 釜山旅遊 🇰🇷</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&family=Pacifico&display=swap"
+    rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --orange: #FF6835;
+      --orange-l: #FFE8DC;
+      --teal: #0ABDE3;
+      --teal-l: #DCF6FF;
+      --yellow: #FFD93D;
+      --yellow-l: #FFF9DB;
+      --green: #6BCB77;
+      --green-l: #E8FBEC;
+      --pink: #FF6B9D;
+      --pink-l: #FFE4EE;
+      --purple: #A855F7;
+      --purple-l: #F3E8FF;
+      --cream: #FFF8F0;
+      --dark: #2D1B0E;
+    }
+
+    body {
+      font-family: 'Nunito', system-ui, sans-serif;
+      background: var(--cream);
+      color: var(--dark);
+      line-height: 1.5;
+    }
+
+    /* ─ HERO ─ */
+    .hero {
+      background:
+        linear-gradient(155deg, rgba(255, 240, 200, 0.86) 0%, rgba(255, 228, 200, 0.82) 35%, rgba(255, 221, 216, 0.82) 65%, rgba(212, 241, 255, 0.9) 100%),
+        url('https://plus.unsplash.com/premium_photo-1661914310117-9875b2229719?w=1400&q=80&auto=format&fit=crop') center/cover no-repeat;
+      padding: 2.5rem 1.5rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-dots {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 1rem;
+    }
+
+    .hero-dots span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--orange);
+      opacity: 0.4;
+    }
+
+    .hero-eyebrow {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--orange);
+      font-style: italic;
+      letter-spacing: 1px;
+      margin-bottom: 0.2rem;
+    }
+
+    .hero h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 5rem;
+      color: var(--orange);
+      text-shadow: 4px 4px 0 rgba(255, 104, 53, 0.12);
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      color: #7A5540;
+      font-weight: 800;
+      margin-bottom: 1.75rem;
+    }
+
+    /* polaroid collage */
+    .collage {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.75rem;
+    }
+
+    .polaroid {
+      background: #fff;
+      padding: 8px 8px 28px;
+      box-shadow: 3px 4px 14px rgba(0, 0, 0, 0.15);
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .polaroid-r1 {
+      transform: rotate(-5deg);
+    }
+
+    .polaroid-r2 {
+      transform: rotate(3deg) translateY(-12px);
+    }
+
+    .polaroid-r3 {
+      transform: rotate(-2deg);
+    }
+
+    .polaroid-r4 {
+      transform: rotate(4deg) translateY(-6px);
+    }
+
+    .pola-art {
+      width: 110px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.8rem;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .pola-art img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .pola-art span {
+      position: relative;
+      z-index: 1;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .pa-teal {
+      background: #0ABDE3;
+    }
+
+    .pa-orange {
+      background: #FF6835;
+    }
+
+    .pa-pink {
+      background: #FF6B9D;
+    }
+
+    .pa-green {
+      background: #0ABDE3;
+    }
+
+    .pola-cap {
+      font-size: 0.7rem;
+      font-weight: 900;
+      color: #999;
+      margin-top: 6px;
+    }
+
+    /* info badges */
+    .badges {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+
+    .badge {
+      background: #fff;
+      border-radius: 50px;
+      padding: 0.45rem 1.1rem;
+      font-size: 0.85rem;
+      font-weight: 900;
+      box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.1);
+      color: var(--dark);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* ─ NAV ─ */
+    .day-nav {
+      background: #fff;
+      border-bottom: 2px solid #f0e8e0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+    }
+
+    .day-nav ul {
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+      list-style: none;
+      padding: 0 0.75rem;
+    }
+
+    .day-nav ul::-webkit-scrollbar {
+      display: none;
+    }
+
+    .day-nav a {
+      display: block;
+      padding: 0.8rem 0.9rem;
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: #aaa;
+      text-decoration: none;
+      white-space: nowrap;
+      border-bottom: 3px solid transparent;
+    }
+
+    .n1 a:hover {
+      color: var(--teal);
+      border-color: var(--teal);
+    }
+
+    .n2 a:hover {
+      color: var(--orange);
+      border-color: var(--orange);
+    }
+
+    .n3 a:hover {
+      color: var(--purple);
+      border-color: var(--purple);
+    }
+
+    .n4 a:hover {
+      color: #0077B6;
+      border-color: #0077B6;
+    }
+
+    .n5 a:hover {
+      color: var(--pink);
+      border-color: var(--pink);
+    }
+
+    .n6 a:hover {
+      color: #6B7280;
+      border-color: #6B7280;
+    }
+
+    /* ─ LAYOUT ─ */
+    .wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    .sec {
+      margin: 2.5rem 0;
+    }
+
+    .sec-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--orange);
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      padding: 0.3rem 1rem;
+      border-radius: 4px 4px 0 0;
+    }
+
+    .sec-body {
+      background: #fff;
+      border-radius: 0 16px 16px 16px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+      border: 1.5px solid rgba(0, 0, 0, 0.06);
+    }
+
+    /* ─ ACCOMMODATION ─ */
+    .accom {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1.5px solid #f0e8e0;
+    }
+
+    .accom-art {
+      background: url('https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTA4NTM3NzMzMTU5NzQ5MDc3MA%3D%3D/original/fcfc0537-bc06-4722-8ffa-3d454142e466.jpeg?im_w=480&im_q=medq') center/cover no-repeat;
+    }
+
+    .accom-info {
+      padding: 1.1rem 1.25rem;
+    }
+
+    .accom-info h3 {
+      font-size: 1rem;
+      font-weight: 900;
+      margin-bottom: 0.7rem;
+    }
+
+    .accom-info h3 small {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #aaa;
+      margin-top: 2px;
+    }
+
+    .accom-rows {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem 1rem;
+    }
+
+    .acr {
+      font-size: 0.82rem;
+    }
+
+    .acr .lbl {
+      color: #bbb;
+      font-weight: 800;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+    }
+
+    .acr .val {
+      font-weight: 900;
+    }
+
+    .accom-tip {
+      margin-top: 0.8rem;
+      padding: 0.55rem 0.8rem;
+      background: var(--yellow-l);
+      border-left: 3px solid var(--yellow);
+      border-radius: 6px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      color: #6B4800;
+    }
+
+    /* ─ DIVIDER ─ */
+    .div {
+      text-align: center;
+      margin: 2rem 0;
+      color: var(--orange);
+      font-size: 0.75rem;
+      letter-spacing: 8px;
+      opacity: 0.5;
+    }
+
+    /* ─ DAY CARDS ─ */
+    .day-card {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 6px 28px rgba(0, 0, 0, 0.09);
+      margin-bottom: 1.5rem;
+      border: 1.5px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .day-header {
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .day-header::after {
+      content: attr(data-e);
+      position: absolute;
+      right: 1.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 4rem;
+      opacity: 0.13;
+      pointer-events: none;
+    }
+
+    .d1h {
+      background: linear-gradient(135deg, #00B4D8, #0096C7);
+    }
+
+    .d2h {
+      background: linear-gradient(135deg, #FF6835, #FF9F43);
+    }
+
+    .d3h {
+      background: linear-gradient(135deg, #A855F7, #C084FC);
+    }
+
+    .d4h {
+      background: linear-gradient(135deg, #0077B6, #0099CC);
+    }
+
+    .d5h {
+      background: linear-gradient(135deg, #FF6B9D, #FF8DC2);
+    }
+
+    .d6h {
+      background: linear-gradient(135deg, #6B7280, #9CA3AF);
+    }
+
+    .day-badge {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      border: 2px solid rgba(255, 255, 255, 0.45);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .day-badge .d {
+      font-size: 0.55rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      opacity: 0.85;
+    }
+
+    .day-badge .n {
+      font-size: 1.5rem;
+      font-weight: 900;
+    }
+
+    .day-head-text h2 {
+      font-size: 1.05rem;
+      font-weight: 900;
+    }
+
+    .day-date {
+      display: inline-block;
+      margin-top: 0.25rem;
+      background: rgba(255, 255, 255, 0.22);
+      border-radius: 20px;
+      padding: 0.15rem 0.7rem;
+      font-size: 0.75rem;
+      font-weight: 800;
+    }
+
+    .day-banner {
+      height: 170px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      gap: 1.5rem;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .day-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+    }
+
+    .d1b {
+      background-image: url('https://images.unsplash.com/photo-1701172189149-450eecf09863?w=900&q=80&auto=format&fit=crop');
+    }
+
+    .d1b::before {
+      background: rgba(220, 246, 255, 0.55);
+    }
+
+    .d2b {
+      background-image: url('https://images.unsplash.com/photo-1672842408576-5076d505d8c1?w=900&q=80&auto=format&fit=crop');
+    }
+
+    .d2b::before {
+      background: rgba(255, 232, 220, 0.52);
+    }
+
+    .d3b {
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Colorful_houses_in_Gamcheon_Culture_Village_at_sunset_in_Busan_South_Korea.jpg/1280px-Colorful_houses_in_Gamcheon_Culture_Village_at_sunset_in_Busan_South_Korea.jpg');
+    }
+
+    .d3b::before {
+      background: rgba(243, 232, 255, 0.45);
+    }
+
+    .d4b {
+      background-image: url('https://plus.unsplash.com/premium_photo-1661885506276-e5196a134c77?w=900&q=80&auto=format&fit=crop');
+    }
+
+    .d4b::before {
+      background: rgba(224, 244, 255, 0.5);
+    }
+
+    .d5b {
+      background-image: url('https://images.unsplash.com/photo-1748838316813-ca91d01294d8?w=900&q=80&auto=format&fit=crop');
+    }
+
+    .d5b::before {
+      background: rgba(255, 228, 238, 0.5);
+    }
+
+    .d6b {
+      background-image: url('https://images.unsplash.com/photo-1738471661544-796deafa2b85?w=900&q=80&auto=format&fit=crop');
+    }
+
+    .d6b::before {
+      background: rgba(243, 244, 246, 0.52);
+    }
+
+    .day-banner span {
+      position: relative;
+      z-index: 1;
+      filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.35));
+    }
+
+    .day-body {
+      background: #fff;
+      padding: 1.1rem 1.5rem 1.4rem;
+    }
+
+    /* Schedule table */
+    .sched {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .sched tr {
+      border-bottom: 1px dashed #f5ece5;
+    }
+
+    .sched tr:last-child {
+      border-bottom: none;
+    }
+
+    .sched td {
+      padding: 0.55rem 0.4rem;
+      vertical-align: top;
+      font-size: 0.88rem;
+    }
+
+    .sched .t {
+      font-weight: 900;
+      font-size: 0.78rem;
+      white-space: nowrap;
+      width: 52px;
+      padding-right: 0.75rem;
+    }
+
+    .sched .i {
+      width: 24px;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .sched .a {
+      font-weight: 800;
+    }
+
+    .sched .sub {
+      display: block;
+      font-size: 0.76rem;
+      color: #999;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .d1 .sched .t {
+      color: #0096C7;
+    }
+
+    .d2 .sched .t {
+      color: var(--orange);
+    }
+
+    .d3 .sched .t {
+      color: var(--purple);
+    }
+
+    .d4 .sched .t {
+      color: #0077B6;
+    }
+
+    .d5 .sched .t {
+      color: var(--pink);
+    }
+
+    .d6 .sched .t {
+      color: #6B7280;
+    }
+
+    /* restaurant callout */
+    .rest {
+      margin-top: 1rem;
+      border-radius: 12px;
+      padding: 0.85rem 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      font-size: 0.85rem;
+    }
+
+    .d1 .rest {
+      background: var(--teal-l);
+      border: 1.5px solid #a5def4;
+    }
+
+    .d2 .rest {
+      background: var(--orange-l);
+      border: 1.5px solid #ffd0bb;
+    }
+
+    .d3 .rest {
+      background: var(--purple-l);
+      border: 1.5px solid #d8b4fe;
+    }
+
+    .d4 .rest {
+      background: #e0f4ff;
+      border: 1.5px solid #93c5fd;
+    }
+
+    .d5 .rest {
+      background: var(--pink-l);
+      border: 1.5px solid #fca5a5;
+    }
+
+    .rest .ico {
+      font-size: 1.75rem;
+      flex-shrink: 0;
+    }
+
+    .rest .rn {
+      font-weight: 900;
+      font-size: 0.9rem;
+      margin-bottom: 1px;
+    }
+
+    .rest .rd {
+      font-size: 0.77rem;
+      color: #888;
+    }
+
+    /* tags */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.45rem;
+    }
+
+    .tag {
+      padding: 0.18rem 0.65rem;
+      border-radius: 20px;
+      font-size: 0.74rem;
+      font-weight: 900;
+      border: 1.5px solid;
+    }
+
+    .to {
+      background: #fff4f0;
+      color: #c94b20;
+      border-color: #ffd0bb;
+    }
+
+    .tt {
+      background: #e0f9ff;
+      color: #0077a0;
+      border-color: #a5def4;
+    }
+
+    .tp {
+      background: #f5eeff;
+      color: #7c3aed;
+      border-color: #d8b4fe;
+    }
+
+    .tb {
+      background: #e0f0ff;
+      color: #1e4d8c;
+      border-color: #93c5fd;
+    }
+
+    .tk {
+      background: #fff0f6;
+      color: #9d1753;
+      border-color: #fca5a5;
+    }
+
+    .ty {
+      background: #fffbdb;
+      color: #855c00;
+      border-color: #fde68a;
+    }
+
+    .tg {
+      background: #e8fbec;
+      color: #1a5e33;
+      border-color: #b7e4c7;
+    }
+
+    footer {
+      background: linear-gradient(135deg, #2D1B0E, #3D2B1F);
+      color: rgba(255, 255, 255, 0.65);
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    footer strong {
+      color: #fff;
+    }
+
+    @media (max-width: 580px) {
+      .hero h1 {
+        font-size: 3.8rem;
+      }
+
+      .accom {
+        grid-template-columns: 1fr;
+      }
+
+      .accom-art {
+        height: 90px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═ HERO ═ -->
+  <div class="hero">
+    <div class="hero-dots"><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+    <p class="hero-eyebrow">Travel to</p>
+    <h1>BUSAN</h1>
+    <p class="hero-sub">🇰🇷 2026 釜山自由行 · 六天五夜</p>
+
+    <div class="collage">
+      <div class="polaroid polaroid-r1">
+        <div class="pola-art pa-teal"><img src="https://www.visitbusan.net/uploadImgs/files/cntnts/20191229153530528"
+            alt="海雲台" loading="lazy" onerror="this.style.display='none'"></div>
+        <div class="pola-cap">海雲台</div>
+      </div>
+      <div class="polaroid polaroid-r2">
+        <div class="pola-art pa-orange"><img
+            src="https://photo.settour.com.tw/900x600/https://www.settour.com.tw/ss_img/info/location/KUL/L0/KUL0000295/KUL0000295_143875.jpg"
+            alt="Skyline Luge" loading="lazy" onerror="this.style.display='none'"></div>
+        <div class="pola-cap">Skyline Luge</div>
+      </div>
+      <div class="polaroid polaroid-r3">
+        <div class="pola-art pa-pink"><img src="https://www.bring-you.info/imgs/2018/12/things-to-do-in-seoul-9.jpg"
+            alt="SPA Land" loading="lazy" onerror="this.style.display='none'"></div>
+        <div class="pola-cap">SPA Land</div>
+      </div>
+      <div class="polaroid polaroid-r4">
+        <div class="pola-art pa-green"><img
+            src="https://plus.unsplash.com/premium_photo-1661914310117-9875b2229719?w=220&q=80&auto=format&fit=crop"
+            alt="廣安大橋" loading="lazy" onerror="this.style.display='none'"></div>
+        <div class="pola-cap">廣安里遊艇</div>
+      </div>
+    </div>
+
+    <div class="badges">
+      <div class="badge">📅 7/8（三）出發</div>
+      <div class="badge">✈️ 7/13（一）返台</div>
+      <div class="badge">🌙 6天5夜</div>
+    </div>
+  </div>
+
+  <!-- ═ NAV ═ -->
+  <nav class="day-nav">
+    <ul>
+      <li><a href="#ac">🏠 住宿</a></li>
+      <li class="n1"><a href="#d1">Day 1 · 7/8</a></li>
+      <li class="n2"><a href="#d2">Day 2 · 7/9</a></li>
+      <li class="n3"><a href="#d3">Day 3 · 7/10</a></li>
+      <li class="n4"><a href="#d4">Day 4 · 7/11</a></li>
+      <li class="n5"><a href="#d5">Day 5 · 7/12</a></li>
+      <li class="n6"><a href="#d6">Day 6 · 7/13</a></li>
+    </ul>
+  </nav>
+
+  <div class="wrap">
+    <!-- ACCOMMODATION -->
+    <div id="ac" class="sec">
+      <div class="sec-label">🏠 住宿資訊</div>
+      <div class="sec-body" style="padding:0;overflow:hidden">
+        <div class="accom">
+          <div class="accom-art"></div>
+          <div class="accom-info">
+            <h3>廣安里 Airbnb<small>96 Gwangnam-ro 광안포디움프레스티지 1601호, 부산, 釜山 48303, 南韓</small></h3>
+            <div class="accom-rows">
+              <div class="acr">
+                <div class="lbl">費用</div>
+                <div class="val" style="color:var(--orange)">NT$ 27,603</div>
+              </div>
+              <div class="acr">
+                <div class="lbl">地點</div>
+                <div class="val">廣安里</div>
+              </div>
+              <div class="acr">
+                <div class="lbl">入住</div>
+                <div class="val">7/8 · 下午 3:00</div>
+              </div>
+              <div class="acr">
+                <div class="lbl">退房</div>
+                <div class="val">7/13 · 上午 10:30</div>
+              </div>
+            </div>
+            <div class="accom-tip">🪥 附牙刷、毛巾 ｜ 自備：拖鞋、衣架</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="div">✦ · · ✦ · · ✦ · · ✦ · · ✦</div>
+    <div class="sec-label" style="border-radius:8px;font-size:0.95rem;margin-bottom:1.25rem">🗓️ 每日行程</div>
+
+    <!-- DAY 1 -->
+    <div id="d1" class="day-card d1">
+      <div class="day-header d1h" data-e="✈️">
+        <div class="day-badge">
+          <div class="d">DAY</div>
+          <div class="n">01</div>
+        </div>
+        <div class="day-head-text">
+          <h2>抵達釜山！</h2>
+          <div class="day-date">7月8日（三）</div>
+        </div>
+      </div>
+      <div class="day-banner d1b"></div>
+      <div class="day-body">
+
+        <!-- Flight Card -->
+        <div
+          style="background:linear-gradient(135deg,#00B4D8,#0077B6);border-radius:14px;padding:1rem 1.1rem;color:#fff;position:relative;overflow:hidden;margin-bottom:1.25rem">
+          <div style="position:absolute;right:-10px;top:50%;transform:translateY(-50%);font-size:5rem;opacity:0.1">✈️
+          </div>
+          <div
+            style="font-size:0.68rem;font-weight:900;opacity:0.75;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.3rem">
+            去程 Outbound</div>
+          <div style="font-size:1rem;font-weight:900;margin-bottom:0.5rem">真航空 <span
+              style="font-family:monospace;font-size:1.05rem;background:rgba(255,255,255,0.18);border-radius:6px;padding:1px 7px">LI742</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.5rem;font-weight:900">
+            <div style="text-align:center">
+              <div style="font-size:1.4rem;line-height:1">16:00</div>
+              <div style="font-size:0.68rem;opacity:0.8">桃園 TPE</div>
+            </div>
+            <div style="flex:1;border-top:1.5px dashed rgba(255,255,255,0.4);position:relative"><span
+                style="position:absolute;top:50%;left:50%;transform:translate(-50%,-55%);font-size:0.8rem">✈</span>
+            </div>
+            <div style="text-align:center">
+              <div style="font-size:1.4rem;line-height:1">19:20</div>
+              <div style="font-size:0.68rem;opacity:0.8">金海 PUS</div>
+            </div>
+          </div>
+          <div style="margin-top:0.5rem;font-size:0.72rem;opacity:0.7;font-weight:700">7月8日（三）· 飛行約 2h 20m</div>
+        </div>
+
+        <table class="sched">
+          <tr>
+            <td class="t">16:00</td>
+            <td class="i">✈️</td>
+            <td class="a">真航空 LI742 桃園起飛</td>
+          </tr>
+          <tr>
+            <td class="t">19:20</td>
+            <td class="i">🛬</td>
+            <td class="a">抵達金海國際機場
+              <span class="sub">移動至民宿計程車（約 50 分）</span>
+              <div class="tags">
+                <span class="tag to">Uber 約 NT$535</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="t">21:00</td>
+            <td class="i">🏠</td>
+            <td class="a">入住廣安里 Airbnb<span class="sub">放行李、稍作休息、附近走走</span></td>
+          </tr>
+          <tr>
+            <td class="t">晚上</td>
+            <td class="i">🌙</td>
+            <td class="a">附近晚餐</td>
+          </tr>
+        </table>
+        <div class="rest">
+          <div class="ico">🍖</div>
+          <div>
+            <div class="rn">83獬豸 ／ 豬肉湯飯 돼지국밥</div>
+            <div class="rd">第一餐先補充體力！</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div id="d2" class="day-card d2">
+      <div class="day-header d2h" data-e="🎢">
+        <div class="day-badge">
+          <div class="d">DAY</div>
+          <div class="n">02</div>
+        </div>
+        <div class="day-head-text">
+          <h2>膠囊列車 × Skyline Luge × Outlet</h2>
+          <div class="day-date">7月9日（四）</div>
+        </div>
+      </div>
+      <div class="day-banner d2b"></div>
+      <div class="day-body">
+        <table class="sched">
+          <tr>
+            <td class="t">09:00</td>
+            <td class="i">🚇</td>
+            <td class="a">出發 → 松亭站<span class="sub">從民宿約 30 分鐘</span></td>
+          </tr>
+          <tr>
+            <td class="t">09:30</td>
+            <td class="i">🎟️</td>
+            <td class="a">兌換海岸列車票（釜山通行證）</td>
+          </tr>
+          <tr>
+            <td class="t">10:00</td>
+            <td class="i">🛷</td>
+            <td class="a">Skyline Luge 滑板賽道<span class="sub">計程車 8 分 ／ 公車 1001·181·100 約 20 分</span>
+              <div class="tags"><span class="tag ty">含釜山通行證</span></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="t">11:30</td>
+            <td class="i">🛍️</td>
+            <td class="a">東釜山 Lotte Outlet<span class="sub">步行 8 分 ｜ 食堂午餐</span></td>
+          </tr>
+          <tr>
+            <td class="t">17:00</td>
+            <td class="i">🚉</td>
+            <td class="a">回到松亭站</td>
+          </tr>
+          <tr>
+            <td class="t">18:00</td>
+            <td class="i">🚂</td>
+            <td class="a">海雲台膠囊列車 蔚浦 → 青沙浦<span class="sub">全程約 30 分鐘，超美海景！</span>
+              <div class="tags"><span class="tag ty">含釜山通行證</span></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="t">20:00</td>
+            <td class="i">🌊</td>
+            <td class="a">沿海岸步行至海雲台海水浴場<span class="sub">步行約 15 分鐘</span></td>
+          </tr>
+        </table>
+        <div class="rest">
+          <div class="ico">🦀</div>
+          <div>
+            <div class="rn">螃蟹當 게장 + 海雲台傳統市場</div>
+            <div class="rd">晚餐：道地螃蟹料理，再逛逛傳統市場</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 3 -->
+    <div id="d3" class="day-card d3">
+      <div class="day-header d3h" data-e="🎨">
+        <div class="day-badge">
+          <div class="d">DAY</div>
+          <div class="n">03</div>
+        </div>
+        <div class="day-head-text">
+          <h2>松島纜車 × 甘川文化村 × 南浦洞</h2>
+          <div class="day-date">7月10日（五）</div>
+        </div>
+      </div>
+      <div class="day-banner d3b"></div>
+      <div class="day-body">
+        <table class="sched">
+          <tr>
+            <td class="t">10:30</td>
+            <td class="i">🚡</td>
+            <td class="a">松島天空公園 海上纜車<span class="sub">計程車約 25 分 ｜ 來回 ~20 分鐘</span>
+              <div class="tags"><span class="tag tp">含釜山通行證</span></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="t">11:30</td>
+            <td class="i">🌉</td>
+            <td class="a">松島龍宮雲橋<span class="sub">步行 8 分鐘</span></td>
+          </tr>
+          <tr>
+            <td class="t">12:00</td>
+            <td class="i">🎨</td>
+            <td class="a">甘川文化村 午餐 + 打卡<span class="sub">計程車約 10 分 ｜ 彩色山丘！</span>
+              <div class="tags"><span class="tag tp">必去打卡</span></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="t">16:00</td>
+            <td class="i">🏙️</td>
+            <td class="a">南浦洞商圈<span class="sub">計程車 15 分 ／ 公車 9·6 約 25 分</span>
+              <div class="tags">
+                <span class="tag tp">BIFF 廣場</span>
+                <span class="tag tp">國際市場</span>
+                <span class="tag tp">罐頭市場</span>
+                <span class="tag tp">札嘎其市場</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="t">晚上</td>
+            <td class="i">🛒</td>
+            <td class="a">Lotte Mart 採購日用品</td>
+          </tr>
+        </table>
+        <div class="rest">
+          <div class="ico">🐙</div>
+          <div>
+            <div class="rn">南浦洞市場海鮮</div>
+            <div class="rd">晚餐：新鮮海鮮、活章魚道地料理</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div id="d4" class="day-card d4">
+      <div class="day-header d4h" data-e="♨️">
+        <div class="day-badge">
+          <div class="d">DAY</div>
+          <div class="n">04</div>
+        </div>
+        <div class="day-head-text">
+          <h2>新世界百貨 × SPA Land × 無人機秀</h2>
+          <div class="day-date">7月11日（六）</div>
+        </div>
+      </div>
+      <div class="day-banner d4b"></div>
+      <div class="day-body">
+        <table class="sched">
+          <tr>
+            <td class="t">上午</td>
+            <td class="i">💄</td>
+            <td class="a">新世界百貨<span class="sub">地鐵 2 號線約 20 分</span>
+              <div class="tags">
+                <span class="tag tb">B2 Marithe 化妝品</span>
+                <span class="tag tb">1F Tamburins 香水</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="t">下午</td>
+            <td class="i">♨️</td>
+            <td class="a">SPA Land 汗蒸幕<span class="sub">4h 基本票；消費 ₩10,000 升級至 6 小時</span>
+              <div class="tags"><span class="tag ty">含釜山通行證</span></div>
+            </td>
+          </tr>
+          <tr>
+            <td class="t">傍晚</td>
+            <td class="i">🛒</td>
+            <td class="a">Lotte Mart 採購</td>
+          </tr>
+          <tr>
+            <td class="t">20:00</td>
+            <td class="i">✨</td>
+            <td class="a">廣安大橋無人機燈光秀<span class="sub">兩場次（20:00 / 21:00）釜山最夢幻夜景！</span>
+              <div class="tags"><span class="tag ty">必看！</span><span class="tag tb">廣安里海邊</span></div>
+            </td>
+          </tr>
+        </table>
+        <div class="rest">
+          <div class="ico">🍜</div>
+          <div>
+            <div class="rn">SPA Land 拉麵 + 炸雞外帶</div>
+            <div class="rd">邊吃炸雞邊看無人機秀！</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 5 -->
+    <div id="d5" class="day-card d5">
+      <div class="day-header d5h" data-e="⛵">
+        <div class="day-badge">
+          <div class="d">DAY</div>
+          <div class="n">05</div>
+        </div>
+        <div class="day-head-text">
+          <h2>西面掃貨 × 遊艇夜航</h2>
+          <div class="day-date">7月12日（日）</div>
+        </div>
+      </div>
+      <div class="day-banner d5b"></div>
+      <div class="day-body">
+        <table class="sched">
+          <tr>
+            <td class="t">10:30</td>
+            <td class="i">🍜</td>
+            <td class="a">西面市場 必吃美食<span class="sub">地鐵 2 號線約 20 分</span>
+              <div class="tags">
+                <span class="tag tk">春夏秋冬小麥麵 冷麵</span>
+                <span class="tag tk">螞蟻家 辣炒章魚</span>
+                <span class="tag tk">松亭3代 豬肉湯飯</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="t">下午</td>
+            <td class="i">👗</td>
+            <td class="a">特色商店大採購
+              <div class="tags">
+                <span class="tag tk">Sappun 服飾</span>
+                <span class="tag tk">Bracket Table 廚具</span>
+                <span class="tag tk">AVIVERE 飾品/手機殼</span>
+                <span class="tag tk">아홉수소녀 街頭服飾</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="t">下午</td>
+            <td class="i">🏬</td>
+            <td class="a">Lotte 百貨 + E-Mart Traders<span class="sub">最後補貨！零食伴手禮一次買齊</span></td>
+          </tr>
+          <tr>
+            <td class="t">晚上</td>
+            <td class="i">⛵</td>
+            <td class="a">廣安大橋夜間遊艇<span class="sub">從住宿步行 8 分 ｜ 約 NT$500/人（KKDAY）</span>
+              <div class="tags"><span class="tag ty">🌟 全程最期待！</span></div>
+            </td>
+          </tr>
+        </table>
+        <div class="rest">
+          <div class="ico">🔥</div>
+          <div>
+            <div class="rn">83獬豸 韓式烤肉</div>
+            <div class="rd">最後一晚！吃頓好的慶祝完美行程</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 6 -->
+    <div id="d6" class="day-card d6">
+      <div class="day-header d6h" data-e="🏠">
+        <div class="day-badge">
+          <div class="d">DAY</div>
+          <div class="n">06</div>
+        </div>
+        <div class="day-head-text">
+          <h2>依依不捨，返程</h2>
+          <div class="day-date">7月13日（一）</div>
+        </div>
+      </div>
+      <div class="day-banner d6b"></div>
+      <div class="day-body">
+
+        <!-- Return Flight Card -->
+        <div
+          style="background:linear-gradient(135deg,#6B7280,#4B5563);border-radius:14px;padding:1rem 1.1rem;color:#fff;position:relative;overflow:hidden;margin-bottom:1.25rem">
+          <div style="position:absolute;right:-10px;top:50%;transform:translateY(-50%);font-size:5rem;opacity:0.1">🏠
+          </div>
+          <div
+            style="font-size:0.68rem;font-weight:900;opacity:0.75;text-transform:uppercase;letter-spacing:1px;margin-bottom:0.3rem">
+            回程 Return</div>
+          <div style="font-size:1rem;font-weight:900;margin-bottom:0.5rem">真航空 <span
+              style="font-family:monospace;font-size:1.05rem;background:rgba(255,255,255,0.18);border-radius:6px;padding:1px 7px">LI741</span>
+          </div>
+          <div style="display:flex;align-items:center;gap:0.5rem;font-weight:900">
+            <div style="text-align:center">
+              <div style="font-size:1.4rem;line-height:1">13:35</div>
+              <div style="font-size:0.68rem;opacity:0.8">金海 PUS</div>
+            </div>
+            <div style="flex:1;border-top:1.5px dashed rgba(255,255,255,0.4);position:relative"><span
+                style="position:absolute;top:50%;left:50%;transform:translate(-50%,-55%);font-size:0.8rem">✈</span>
+            </div>
+            <div style="text-align:center">
+              <div style="font-size:1.4rem;line-height:1">15:00</div>
+              <div style="font-size:0.68rem;opacity:0.8">桃園 TPE</div>
+            </div>
+          </div>
+          <div style="margin-top:0.5rem;font-size:0.72rem;opacity:0.7;font-weight:700">7月13日（一）· 飛行約 1h 25m</div>
+        </div>
+
+        <table class="sched">
+          <tr>
+            <td class="t">09:00</td>
+            <td class="i">🍳</td>
+            <td class="a">吃早餐</td>
+          </tr>
+          <tr>
+            <td class="t">10:30</td>
+            <td class="i">🧳</td>
+            <td class="a">退房<span class="sub">整理行李，準時退房</span></td>
+          </tr>
+          <tr>
+            <td class="t">11:00</td>
+            <td class="i">🛫</td>
+            <td class="a">抵達金海國際機場
+              <div style="margin-top:0.6rem;display:flex;align-items:flex-start;gap:0.5rem">
+                <div>辦理退稅<span class="sub">兩段式退稅，超過 ₩21,000 可申請</span>
+                  <div class="tags"><span class="tag tg">記得留退稅收據！</span></div>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td class="t">13:35</td>
+            <td class="i">✈️</td>
+            <td class="a" style="font-weight:900">班機起飛，再見釜山！<span class="sub">金海國際機場 출발</span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <div style="height:2rem"></div>
+  </div>
+
+  <footer>
+    <strong>🇰🇷 2026 釜山自由行</strong><br>
+    7月8日（三）→ 7月13日（一）· 摳泥的粉絲釜山行
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到頂端">
+    <div class="btn-inner">
+      <img src="S__22790154.jpg" alt="">
+      <span class="top-arrow">↑</span>
+    </div>
+  </button>
+
+  <style>
+    #back-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 1.5rem;
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      overflow: visible;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s, bottom 0.2s;
+      background: none;
+      z-index: 999;
+    }
+    #back-top.visible { opacity: 1; pointer-events: all; }
+
+    #back-top .btn-inner {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    #back-top:hover .btn-inner {
+      transform: scale(1.08);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.32);
+    }
+
+    #back-top img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    #back-top .top-arrow {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 900;
+      color: #fff;
+      background: rgba(0,0,0,0.42);
+      border-radius: 50%;
+      opacity: 0;
+      transition: opacity 0.18s;
+      z-index: 2;
+    }
+    #back-top:hover .top-arrow,
+    #back-top:active .top-arrow { opacity: 1; }
+
+    /* coin spin */
+    @keyframes coin-spin {
+      0%   { transform: rotateY(0deg); }
+      100% { transform: rotateY(1080deg); }
+    }
+    #back-top { perspective: 220px; }
+    #back-top .btn-inner.spinning {
+      animation: coin-spin 0.9s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    }
+  </style>
+
+  <script>
+    (function () {
+      var btn = document.getElementById('back-top');
+      var footer = document.querySelector('footer');
+      var GAP = 16;
+      function update() {
+        btn.classList.toggle('visible', window.scrollY > 300);
+        var footerTop = footer.getBoundingClientRect().top;
+        var vh = window.innerHeight;
+        btn.style.bottom = footerTop < vh ? (vh - footerTop + GAP) + 'px' : '2rem';
+      }
+      window.addEventListener('scroll', update);
+      window.addEventListener('resize', update);
+
+      /* coin spin on click */
+      var inner = btn.querySelector('.btn-inner');
+      btn.addEventListener('click', function () {
+        inner.classList.remove('spinning');
+        void inner.offsetWidth; // reflow to restart animation
+        inner.classList.add('spinning');
+        inner.addEventListener('animationend', function () {
+          inner.classList.remove('spinning');
+        }, { once: true });
+      });
+    })();
+  </script>
+
+</body>
+
+</html>
